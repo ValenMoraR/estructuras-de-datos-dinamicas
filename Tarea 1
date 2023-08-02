@@ -1,1 +1,24 @@
+#Encontrar el valor máximo flotante y entero en python 
+import sys 
 
+#INT
+
+MaxIntValue= sys.maxsize
+print(f"The maximum value of integers in python is: {MaxIntValue}")
+sum1= (MaxIntValue+ MaxIntValue)
+print(sum1)
+#In Python, the addition operation is automatically performed with arbitrarily  
+# large integers, so the result will be an even larger number.
+
+#FLOAT
+MaxFloatValue= sys.float_info.max
+print(f"The maximum value of floats in python is: {MaxFloatValue}")
+sum2= (MaxFloatValue+ MaxFloatValue)
+print(sum2)
+
+#When you add the maximum representable value of a floating-point number in 
+# Python with itself, the result will be inf, which represents positive infinity.
+
+#The reason why the result is infinity when you add the maximum representable 
+# floating-point value is related to the representation and handling 
+# of floating-point numbers in the computer.
