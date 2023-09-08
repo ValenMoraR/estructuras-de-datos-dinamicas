@@ -1,0 +1,67 @@
+#En las listas enlazadas no hay posiciones
+#Se deben guardar las referencias del nodo anterior 
+#Cada elemento tiene un pre(atras) y un sus(adelante)
+
+#node: value, next, prev
+#dll: header(refrenicia de donde empienza (inicio)), trailer(referencia de donde termina(final)) ambos son de tipo nodo
+#se le da un nombre bonito al none inicial y al none final 
+
+
+class Node:
+    def __init__(self,value, next=None, prev=None):
+        self.value= value
+        self.next= next
+        self.prev= prev 
+        
+class DLinkedList:
+    def __init__(self):
+        self.header:Node= Node(None) #--> dejo el ____:Node para mantener la estructura de los type hints
+        self.trailer:Node= Node(None)
+        self.header.next = self.trailer
+        self.trailer.prev= self.header
+    
+    def add_head(self,e):
+        if self.header.next== self.trailer:
+            new_node= Node(e)
+            self.header.next= new_node
+            new_node.prev= self.header
+            new_node.next=self.trailer
+            self.trailer.prev= new_node
+        else:
+            new_node=Node(e)
+            old_head= self.header.next
+            self.header.next=new_node
+            new_node.prev= self.header
+            new_node.next= old_head
+    
+    def add_tail(self, e): 
+        new_node= Node(e)
+        if self.header.next== self.trailer:
+            self.header.next=new_node
+            new_node.next=self.trailer
+            new_node.prev= self.header
+            self.trailer.prev= new_node
+        else: 
+            new_node= Node(e)
+            old_tail= self.trailer.prev
+            self.trailer.prev= new_node
+            new_node.next=self.trailer
+            new_node.prev= old_tail
+            old_tail.next= new_node
+     
+
+    def traverse(self):
+        current= self.header.next
+        while current != self.trailer:
+            print(current.value, "<=>",end=" ")
+            current= current.next
+
+
+
+dll=DLinkedList()
+dll.add_head(32)
+dll.add_head(7)
+dll.add_tail(5)
+dll.add_head(3)
+dll.add_tail(90)
+dll.traverse()
