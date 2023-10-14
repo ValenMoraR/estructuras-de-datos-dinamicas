@@ -9,3 +9,6 @@ Si intenté hacer el balance de los arboles y lo onvestigué bastante pero no me
 La verdad no sé que más explicarte. 
 
 Ah bueno, aparte hice un método imprimir para ver la estructura del arbol, ese lo saqué de un ejemplo viejito del semestre pasado.
+
+Puedes copiar y pegar el código de el repositorio en tu eeditor de código de confianza, siempre y cuando pueda correr el python sin ningún problema. 
+Tambien te subí el archivo comprimido por si tienes algún problema al copiarlo. 
