@@ -1,0 +1,11 @@
+Explicación.
+
+La herramienta que usé para desarrollar el código fue Visual Studio Code, entonces si tienes esa para correr el código sería perfecto.
+
+Lo que permite que se ejecute el código tranquilamente es "if __name__ == "__main__":" el cual se encuentra al final del código con los métodos que se necesitan para poder generar el arbol y todas sus funcionalidades. 
+
+Si intenté hacer el balance de los arboles y lo onvestigué bastante pero no me dio el tiempo :(.
+
+La verdad no sé que más explicarte. 
+
+Ah bueno, aparte hice un método imprimir para ver la estructura del arbol, ese lo saqué de un ejemplo viejito del semestre pasado.
