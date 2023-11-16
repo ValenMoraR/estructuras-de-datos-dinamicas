@@ -6,10 +6,10 @@ class BinaryNode:
         self.left_S = None
         self.right_S = None
 
-def callback(node):
+def callback(node)-> int:
     print(node.value)
     
-def recorrido_in_order(root, callback):
+def recorrido_in_order(root, callback)-> None:
     stack = []
     current_node = root
     
